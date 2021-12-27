@@ -1,43 +1,25 @@
 const { User, Property } = require("../models");
+const { AuthenticationError } = require("apollo-server-express");
+const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    profiles: async () => {
-      return Profile.find();
+    users: async () => {
+      return User.find();
     },
-
-    profile: async (parent, { profileId }) => {
-      return Profile.findOne({ _id: profileId });
+    user: async (parent, { username }) => {
+      return User.findOne({ username });
     },
-  },
-
-  Mutation: {
-    addProfile: async (parent, { name }) => {
-      return Profile.create({ name });
+    properties: async () => {
+      return Property.find();
     },
-    addSkill: async (parent, { profileId, skill }) => {
-      return Profile.findOneAndUpdate(
-        { _id: profileId },
-        {
-          $addToSet: { skills: skill },
-        },
-        {
-          new: true,
-          runValidators: true,
-        }
-      );
-    },
-    removeProfile: async (parent, { profileId }) => {
-      return Profile.findOneAndDelete({ _id: profileId });
-    },
-    removeSkill: async (parent, { profileId, skill }) => {
-      return Profile.findOneAndUpdate(
-        { _id: profileId },
-        { $pull: { skills: skill } },
-        { new: true }
-      );
+    property: async (parent, { username }) => {
+      return Property.findOne({ username });
     },
   },
+
+  Mutation: {},
 };
 
 module.exports = resolvers;
+d;
