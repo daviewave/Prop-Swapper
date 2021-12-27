@@ -23,19 +23,6 @@ const typeDefs = gql`
     properties: [Property]
     property(propertyId: ID!): Property
   }
-
-  type Mutation {
-    addUser(username: String!, email: String!, password: String!): Auth
-    login(email: String!, password: String!): Auth
-    addProperty(
-      UserId: ID!
-      address: String!
-      city: String!
-      state: String!
-      zip: Int!
-    ): User
-    removeProperty(propertyId: ID!): Property
-  }
 `;
 
 module.exports = typeDefs;

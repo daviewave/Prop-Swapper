@@ -17,12 +17,12 @@ const propertySchema = new Schema({
     trim: true,
   },
   zip: {
-    type: INT,
+    type: Number,
     required: true,
     trim: true,
   },
   bedrooms: {
-    type: INT,
+    type: Number,
     required: true,
     trim: true,
   },

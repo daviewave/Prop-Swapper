@@ -17,9 +17,6 @@ const resolvers = {
       return Property.findOne({ username });
     },
   },
-
-  Mutation: {},
 };
 
 module.exports = resolvers;
-d;
