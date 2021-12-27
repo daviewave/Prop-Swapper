@@ -7,7 +7,8 @@ db.once("open", async () => {
   try {
     await User.deleteMany({});
     await Property.deleteMany({});
-    await Profile.create(profileSeeds);
+    await User.create(userSeeds);
+    await Property.create(propertySeeds);
 
     console.log("data is seeded!");
     process.exit(0);
