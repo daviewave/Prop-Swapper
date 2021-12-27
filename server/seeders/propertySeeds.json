@@ -5,5 +5,12 @@
     "state": "NY",
     "zip": 11354,
     "bedrooms": 3
+  },
+  {
+    "address": "14 Madison Ave",
+    "city": "Chicago",
+    "state": "IL",
+    "zip": 60612,
+    "bedrooms": 2
   }
 ]
