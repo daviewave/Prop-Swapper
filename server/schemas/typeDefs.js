@@ -13,7 +13,8 @@ const typeDefs = gql`
     address: String
     city: String
     state: String
-    zip: INT
+    zip: Int
+    bedrooms: Int
   }
 
   type Query {
@@ -31,7 +32,7 @@ const typeDefs = gql`
       address: String!
       city: String!
       state: String!
-      zip: INT!
+      zip: Int!
     ): User
     removeProperty(propertyId: ID!): Property
   }

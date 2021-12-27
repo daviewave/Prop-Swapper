@@ -1,4 +1,4 @@
-const { Profile } = require('../models');
+const { User, Property } = require("../models");
 
 const resolvers = {
   Query: {

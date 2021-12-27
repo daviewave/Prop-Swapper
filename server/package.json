@@ -16,6 +16,7 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.9",
     "jsonwebtoken": "^8.5.1",
+    "dotenv": "^8.2.0",
     "graphql": "^15.5.1"
   },
   "devDependencies": {
