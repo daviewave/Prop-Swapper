@@ -16,6 +16,7 @@ const typeDefs = gql`
     state: String
     zip: Int
     bedrooms: Int
+    users: User
   }
 
   type Auth {

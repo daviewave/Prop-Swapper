@@ -5,16 +5,13 @@ const { signToken } = require("../utils/auth");
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find();
+      return User.find().populate("property");
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username });
+      return User.findOne({ username }).populate("property");
     },
     properties: async () => {
-      return Property.find();
-    },
-    property: async (parent, { username }) => {
-      return Property.findOne({ username });
+      return Property.find().populate("user");
     },
   },
 };

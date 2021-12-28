@@ -26,6 +26,10 @@ const propertySchema = new Schema({
     required: true,
     trim: true,
   },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+  },
 });
 
 const Property = model("Property", propertySchema);

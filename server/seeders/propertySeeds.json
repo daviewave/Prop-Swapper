@@ -12,5 +12,19 @@
     "state": "IL",
     "zip": 60612,
     "bedrooms": 2
+  },
+  {
+    "address": "88 Catch Rd",
+    "city": "Miami",
+    "state": "FL",
+    "zip": 33014,
+    "bedrooms": 1
+  },
+  {
+    "address": "225 25th Ave N",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": 37203,
+    "bedrooms": 8
   }
 ]
