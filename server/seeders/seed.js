@@ -24,7 +24,7 @@ db.once("open", async () => {
       await tempProperty.save();
     }
 
-    console.log("Data is seeded!");
+    console.log("Data is seeded");
     process.exit(0);
   } catch (err) {
     throw err;
