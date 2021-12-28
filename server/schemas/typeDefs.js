@@ -17,6 +17,11 @@ const typeDefs = gql`
     bedrooms: Int
   }
 
+  type Auth {
+    token: ID!
+    user: User
+  }
+
   type Query {
     users: [User]
     user(username: String!): User
