@@ -13,6 +13,9 @@ const Navbar = () => {
         <Link to="/search">
           <li>Search Properties</li>
         </Link>
+        <Link to="/login">
+          <li>Login</li>
+        </Link>
       </ul>
     </nav>
   );
