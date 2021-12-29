@@ -20,6 +20,7 @@ const resolvers = {
   },
 
   Mutation: {
+    //same question on the parent parameter here
     addUser: async (parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });
       const token = signToken(user);
@@ -47,6 +48,19 @@ const resolvers = {
         return User.findOneAndDelete({ _id: context.user._id });
       }
       throw new AuthenticationError("You need to be logged in!");
+    },
+    //TODO: MUTATION/FUNCTION FOR ADDING PROPERTY
+    //TODO: right now, this mutation works by passing in the current user as a parameter, this is unnecassary bc the user has to be logged on to  add their property ... basically if the user does not have a property associated with account, we will need to save the username and pass that in as a parameter
+    addProperty: async ({ address, city, state, zip, bedrooms, user }) => {
+      const property = await Property.create({
+        address,
+        city,
+        state,
+        zip,
+        bedrooms,
+        user,
+      });
+      return { property };
     },
   },
 };
