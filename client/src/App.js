@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar";
 const App = () => {
   return (
     <BrowserRouter>
+      <Navbar />
       <div>
         <Routes>
           <Route exact path="/login" element={<Login />} />
@@ -18,7 +19,6 @@ const App = () => {
           <Route exact path="/signup" element={<Signup />} />
         </Routes>
       </div>
-      <Navbar />
       <Footer />
     </BrowserRouter>
   );
