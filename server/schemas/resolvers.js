@@ -2,20 +2,39 @@ const { User, Property } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
 
+//ROUGH DRAFT OF ALL QUERIES AND MUTATIONS WE WILL NEED:
+//QUERIES
+//1. get user for logins
+//2. get the current users property
+//3. get properties based on location searched (location matches properties 'state')
+//4. get the user associated with a searched/selected property
+
+//MUTATIONS
+//1. addUser
+//2. login
+//3. removeUser
+//4. addProperty
+
 const resolvers = {
+  //1. get users
   Query: {
     //get information about users
     users: async () => {
       return User.find().populate("property");
     },
-    //i think this is supposed to find the property assiociated with a specific user
+
+    //2. get property based on current user
     //what is the parent parameter here?
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate("property");
     },
-    //allows to get properties and information about them
-    properties: async () => {
-      return Property.find().populate("user");
+
+    //There will be an input box on the 'search page' where we will have to get the input (i think it will end up being a dropdown) and pass the input to this function
+    //TODO: use the location passed in to QUERY all properties with the state that was passed in
+    properties: async (location) => {
+      if (location === Property.find({ state }).populate("state")) {
+        return Property.find().populate("user");
+      }
     },
   },
 
@@ -52,6 +71,8 @@ const resolvers = {
 
     //TODO: MUTATION/FUNCTION FOR ADDING PROPERTY
     //TODO: right now, this mutation works by passing in the current user as a parameter, this is unnecassary bc the user has to be logged on to  add their property ... basically if the user does not have a property associated with account, we will need to save the username and pass that in as a parameter
+
+    //NOTE: SHOULD WE TAKE OUT CITY FOR THE MVP?
     addProperty: async ({ address, city, state, zip, bedrooms, user }) => {
       const property = await Property.create({
         address,
