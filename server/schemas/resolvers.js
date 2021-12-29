@@ -4,12 +4,16 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
+    //get information about users
     users: async () => {
       return User.find().populate("property");
     },
+    //i think this is supposed to find the property assiociated with a specific user
+    //what is the parent parameter here?
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate("property");
     },
+    //allows to get properties and information about them
     properties: async () => {
       return Property.find().populate("user");
     },
