@@ -49,6 +49,7 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
+
     //TODO: MUTATION/FUNCTION FOR ADDING PROPERTY
     //TODO: right now, this mutation works by passing in the current user as a parameter, this is unnecassary bc the user has to be logged on to  add their property ... basically if the user does not have a property associated with account, we will need to save the username and pass that in as a parameter
     addProperty: async ({ address, city, state, zip, bedrooms, user }) => {
