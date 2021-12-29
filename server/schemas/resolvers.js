@@ -2,7 +2,6 @@ const { User, Property } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
 
-
 //ROUGH DRAFT OF ALL QUERIES AND MUTATIONS WE WILL NEED:
 //QUERIES
 //1. get user for logins
@@ -15,7 +14,6 @@ const { signToken } = require("../utils/auth");
 //2. login
 //3. removeUser
 //4. addProperty
-
 
 const resolvers = {
   //1. get users
@@ -70,7 +68,7 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
-    
+
     //TODO: MUTATION/FUNCTION FOR ADDING PROPERTY
     //TODO: right now, this mutation works by passing in the current user as a parameter, this is unnecassary bc the user has to be logged on to  add their property ... basically if the user does not have a property associated with account, we will need to save the username and pass that in as a parameter
 
