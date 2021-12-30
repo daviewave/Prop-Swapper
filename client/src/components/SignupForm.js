@@ -2,6 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { TextField } from "@mui/material";
+import { Button } from "@mui/material";
 
 const SignupForm = () => {
   return (
@@ -27,6 +28,10 @@ const SignupForm = () => {
         type="password"
         variant="standard"
       />
+      <Button id="hello" variant="contained">
+        Hello World
+      </Button>
+      <button>Submit</button>
     </Container>
   );
 };
