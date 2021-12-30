@@ -14,7 +14,7 @@ const Navbar = () => {
           <li>Search Properties</li>
         </Link>
         <Link to="/login">
-          <li>Login</li>
+          <li>Login OR Sign Up</li>
         </Link>
       </ul>
     </nav>
