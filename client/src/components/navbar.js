@@ -4,17 +4,17 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav id="navbar">
       <h1>PROP SWAP</h1>
-      <ul>
+      <ul id="navtabs">
         <Link to="/profile">
-          <li>My Profile</li>
+          <li>My Prop</li>
         </Link>
         <Link to="/search">
-          <li>Search Properties</li>
+          <li>Swap!</li>
         </Link>
         <Link to="/login">
-          <li>Login OR Sign Up</li>
+          <li>Login</li>
         </Link>
       </ul>
     </nav>

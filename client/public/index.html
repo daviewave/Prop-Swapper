@@ -30,11 +30,25 @@
         font-family: "Courier New", Courier, monospace;
       }
 
-      #hello {
-        height: 70px;
-        width: 70px;
-        background-color: aqua;
-        font-family: "Courier New", Courier, monospace;
+      #body {
+        min-height: 100vh;
+      }
+
+      #navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: cadetblue;
+        margin-bottom: 2rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      #navtabs {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        gap: 1rem;
       }
 
       #form-container {
@@ -51,11 +65,11 @@
       #footer {
         background-color: cadetblue;
         height: 4rem;
-        margin-top: 2rem;
+        margin-top: auto;
       }
     </style>
   </head>
-  <body>
+  <body id="body">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

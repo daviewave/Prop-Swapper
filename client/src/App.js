@@ -20,7 +20,7 @@ const App = () => {
       <BrowserRouter>
         <CssBaseline />
         <Navbar />
-        <div>
+        <div id="body">
           <Routes>
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/profile" element={<Profile />} />
