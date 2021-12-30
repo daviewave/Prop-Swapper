@@ -6,6 +6,7 @@ import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Button from "@mui/material/Button";
 
 const client = new ApolloClient({
   uri: "/graphql",
@@ -25,6 +26,7 @@ const App = () => {
           </Routes>
         </div>
         <Footer />
+        <Button variant="contained">Hello World</Button>
       </BrowserRouter>
     </ApolloProvider>
   );
