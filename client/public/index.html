@@ -25,8 +25,51 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Prop Swap</title>
+    <style>
+      * {
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      #body {
+        min-height: 100vh;
+      }
+
+      #navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: cadetblue;
+        margin-bottom: 2rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      #navtabs {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        gap: 1rem;
+      }
+
+      #form-container {
+        border-style: solid;
+        border-width: 2px;
+        border-color: blueviolet;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem;
+      }
+
+      #footer {
+        background-color: cadetblue;
+        height: 4rem;
+        margin-top: auto;
+      }
+    </style>
   </head>
-  <body>
+  <body id="body">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
