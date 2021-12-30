@@ -26,7 +26,9 @@ const App = () => {
           </Routes>
         </div>
         <Footer />
-        <Button variant="contained">Hello World</Button>
+        <Button id="hello" variant="contained">
+          Hello World
+        </Button>
       </BrowserRouter>
     </ApolloProvider>
   );
