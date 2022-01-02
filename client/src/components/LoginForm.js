@@ -61,7 +61,7 @@ const LoginForm = () => {
             type="password"
             placeholder="Password"
           />
-          <button type="button" onClick={handleFormSubmit}>
+          <button id="btn" type="button" onClick={handleFormSubmit}>
             Submit
           </button>
         </form>
@@ -72,7 +72,7 @@ const LoginForm = () => {
         )}
       </div>
 
-      <p>
+      <p id="login-form-bottom">
         Don't have an account with us?{" "}
         <span>
           {" "}

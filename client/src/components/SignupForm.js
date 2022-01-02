@@ -77,7 +77,7 @@ const SignupForm = () => {
             type="password"
             placeholder="Password"
           />
-          <button type="button" onClick={handleFormSubmit}>
+          <button id="btn" type="button" onClick={handleFormSubmit}>
             Submit
           </button>
         </form>
