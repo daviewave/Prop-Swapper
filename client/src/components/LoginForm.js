@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Container from "@mui/material/Container";
 // Here we import a helper function that will check if the email is valid
 import { validateEmail } from "../utils/helpers";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -70,6 +71,16 @@ const LoginForm = () => {
           </div>
         )}
       </div>
+
+      <p>
+        Don't have an account with us?{" "}
+        <span>
+          {" "}
+          <Link to="/signup">
+            <p>Sign Up!</p>
+          </Link>
+        </span>{" "}
+      </p>
     </Container>
   );
 };
