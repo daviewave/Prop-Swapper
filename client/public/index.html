@@ -52,6 +52,7 @@
       }
 
       #form-container {
+        background-color: cadetblue;
         border-style: solid;
         border-width: 2px;
         border-color: blueviolet;
@@ -60,6 +61,16 @@
         justify-content: center;
         gap: 2rem;
         padding: 2rem;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .form :focus {
+        outline: none;
       }
 
       #footer {
