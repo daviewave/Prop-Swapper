@@ -76,9 +76,7 @@ const LoginForm = () => {
         Don't have an account with us?{" "}
         <span>
           {" "}
-          <Link to="/signup">
-            <p>Sign Up!</p>
-          </Link>
+          <Link to="/signup">Sign Up!</Link>
         </span>{" "}
       </p>
     </Container>

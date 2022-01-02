@@ -1,7 +1,8 @@
 import React from "react";
+import InfoForm from "../components/InfoForm";
 
 const Profile = () => {
-  return <div>Profile</div>;
+  return <InfoForm />;
 };
 
 export default Profile;
