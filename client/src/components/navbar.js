@@ -7,13 +7,13 @@ const Navbar = () => {
     <nav id="navbar">
       <h1>PROP SWAP</h1>
       <ul id="navtabs">
-        <Link to="/profile">
+        <Link style={{ textDecoration: "none" }} to="/profile">
           <li>My Prop</li>
         </Link>
-        <Link to="/search">
+        <Link style={{ textDecoration: "none" }} to="/search">
           <li>Swap!</li>
         </Link>
-        <Link to="/login">
+        <Link style={{ textDecoration: "none" }} to="/login">
           <li>Login</li>
         </Link>
       </ul>

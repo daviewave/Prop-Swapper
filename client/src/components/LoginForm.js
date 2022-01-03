@@ -76,7 +76,9 @@ const LoginForm = () => {
         Don't have an account with us?{" "}
         <span>
           {" "}
-          <Link to="/signup">Sign Up!</Link>
+          <Link id="link" style={{ textDecoration: "none" }} to="/signup">
+            Sign Up!
+          </Link>
         </span>{" "}
       </p>
     </Container>
