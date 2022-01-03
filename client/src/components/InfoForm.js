@@ -92,7 +92,7 @@ const InfoForm = () => {
             type="text"
             placeholder="Password"
           />
-          <button id="btn" type="button" onClick={handleFormSubmit}>
+          <button class="btn" type="button" onClick={handleFormSubmit}>
             Update!
           </button>
         </form>
