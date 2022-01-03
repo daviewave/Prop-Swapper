@@ -36,19 +36,25 @@
 
       #navbar {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
         background-color: cadetblue;
         margin-bottom: 2rem;
         align-items: center;
         flex-wrap: wrap;
       }
 
+      #navbar h1 {
+        text-align: center;
+      }
+
       #navtabs {
         display: flex;
+        justify-content: flex-start;
         flex-direction: row;
         list-style-type: none;
         gap: 1rem;
+        text-align: center;
+        padding: 0px;
       }
 
       #link:hover {
