@@ -7,6 +7,13 @@ const ProfileCard = () => {
     <div>
       <Container>
         <h1>profile</h1>
+        <h2>Address: </h2>
+        <h2>City: </h2>
+        <h2>State: </h2>
+        <h2>Zip: </h2>
+        <h2># of Bedrooms: </h2>
+        <h2>email: </h2>
+
         <Link to="/updateinfo">Update Info</Link>
       </Container>
     </div>
