@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Container from "@mui/material/Container";
+import { Link } from "react-router-dom";
 
 const InfoForm = () => {
   const [address, setAddress] = useState("");
@@ -101,6 +102,7 @@ const InfoForm = () => {
           </div>
         )}
       </div>
+      <Link to="/profile">Back To Profile</Link>
     </Container>
   );
 };
