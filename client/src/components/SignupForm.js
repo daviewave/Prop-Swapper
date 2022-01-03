@@ -1,91 +1,83 @@
 import React, { useState } from "react";
 import Container from "@mui/material/Container";
 // Here we import a helper function that will check if the email is valid
-import { checkPassword, validateEmail } from "../utils/helpers";
+import { ADD_USER } from "../utils/mutations";
+import { useMutation } from "@apollo/client";
+import Auth from "../utils/auth";
+import { Link } from "react-router-dom";
 
 const SignupForm = () => {
-  const [email, setEmail] = useState("");
-  const [userName, setUserName] = useState("");
-  const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [formState, setFormState] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+  const [addUser, { error, data }] = useMutation(ADD_USER);
 
-  const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered the change
-    const { target } = e;
-    const inputType = target.name;
-    const inputValue = target.value;
+  const handleChange = (event) => {
+    const { name, value } = event.target;
 
-    // Based on the input type, we set the state of either email, username, and password
-    if (inputType === "email") {
-      setEmail(inputValue);
-    } else if (inputType === "userName") {
-      setUserName(inputValue);
-    } else {
-      setPassword(inputValue);
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formState);
+
+    try {
+      const { data } = await addUser({
+        variables: { ...formState },
+      });
+
+      Auth.login(data.addUser.token);
+
+      console.log(data);
+    } catch (e) {
+      console.error(e);
     }
   };
 
-  const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    e.preventDefault();
-
-    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-    if (!validateEmail(email) || !userName) {
-      setErrorMessage("Email or username is invalid");
-      // We want to exit out of this code block if something is wrong so that the user can correct it
-      return;
-      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
-    }
-    if (!checkPassword(password)) {
-      setErrorMessage(
-        `Choose a more secure password for the account: ${userName}`
-      );
-      return;
-    }
-    alert(`Hello ${userName}`);
-
-    // If everything goes according to plan, we want to clear out the input after a successful registration.
-
-    //THIS IS WHERE THE MUTATION WILL GO
-    setUserName("");
-    setPassword("");
-    setEmail("");
-  };
   return (
     <Container id="form-container" maxWidth="xs">
       <div>
-        <p>Hello {userName}</p>
-        <form className="form">
-          <input
-            value={email}
-            name="email"
-            onChange={handleInputChange}
-            type="email"
-            placeholder="email"
-          />
-          <input
-            value={userName}
-            name="userName"
-            onChange={handleInputChange}
-            type="text"
-            placeholder="username"
-          />
-          <input
-            value={password}
-            name="password"
-            onChange={handleInputChange}
-            type="password"
-            placeholder="Password"
-          />
-          <button id="btn" type="button" onClick={handleFormSubmit}>
-            Submit
-          </button>
-        </form>
-        {errorMessage && (
-          <div>
-            <p className="error-text">{errorMessage}</p>
-          </div>
+        <p>Sign Up</p>
+        {data ? (
+          <p>
+            Success! You may now head <Link to="/profile">to your profile</Link>
+          </p>
+        ) : (
+          <form className="form">
+            <input
+              value={formState.email}
+              name="email"
+              onChange={handleChange}
+              type="email"
+              placeholder="email"
+            />
+            <input
+              value={formState.username}
+              name="username"
+              onChange={handleChange}
+              type="text"
+              placeholder="username"
+            />
+            <input
+              value={formState.password}
+              name="password"
+              onChange={handleChange}
+              type="password"
+              placeholder="Password"
+            />
+            <button id="btn" type="button" onClick={handleFormSubmit}>
+              Submit
+            </button>
+          </form>
         )}
+
+        {error && <div>{error.message}</div>}
       </div>
     </Container>
   );
