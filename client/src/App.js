@@ -5,7 +5,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar";
 import CssBaseline from "@mui/material/CssBaseline";
 import Signup from "./pages/Signup";
 import Info from "./pages/Info";
