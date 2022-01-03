@@ -7,6 +7,7 @@ const InfoForm = () => {
   const [state, setState] = useState("");
   const [bedrooms, setBedrooms] = useState("");
   const [description, setDescription] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
@@ -34,6 +35,10 @@ const InfoForm = () => {
 
     console.log(address);
 
+    if (address) {
+      setSuccessMessage("Profile Updated");
+    }
+
     //THIS IS WHERE THE MUTATION WILL GO
     setAddress("");
     setCity("");
@@ -45,7 +50,7 @@ const InfoForm = () => {
     <Container id="form-container" maxWidth="xs">
       <div>
         <p>UPDATE YOUR INFO TO START SWAPPING</p>
-        <form className="update-form">
+        <form className="form">
           <h1>Address:</h1>
           <input
             value={address}
@@ -90,6 +95,11 @@ const InfoForm = () => {
             Update!
           </button>
         </form>
+        {successMessage && (
+          <div>
+            <p>{successMessage}</p>
+          </div>
+        )}
       </div>
     </Container>
   );
