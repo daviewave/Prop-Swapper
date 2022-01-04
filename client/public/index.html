@@ -24,20 +24,32 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Hairline&display=swap"
+      rel="stylesheet"
+    />
     <title>Prop Swap</title>
     <style>
       * {
-        font-family: "Courier New", Courier, monospace;
+        font-family: "Bungee", cursive;
+        font-size: 20px;
       }
 
       #body {
         min-height: 100vh;
+        background: url(https://upload.wikimedia.org/wikipedia/commons/c/c2/Sphere_rotating_transparency.gif)
+          fixed center;
+        /* backdrop-filter: blur(7px); */
+        background-repeat: no-repeat;
+        background-size: 900px;
       }
 
       #navbar {
         display: flex;
         flex-direction: column;
-        background-color: cadetblue;
+        background-color: rgb(33, 11, 73);
         margin-bottom: 2rem;
         align-items: center;
         flex-wrap: wrap;
@@ -57,15 +69,25 @@
         padding: 0px;
       }
 
+      #link {
+        color: rgb(66, 137, 219);
+      }
+
       #link:hover {
         color: white;
       }
 
+      #link:active {
+        transition-timing-function: ease-out;
+        transition: 0.5s;
+        transform: translateY(4px);
+      }
+
       #form-container {
-        background-color: cadetblue;
+        background-color: white;
         border-style: solid;
-        border-width: 2px;
-        border-color: blueviolet;
+        border-width: 10px;
+        border-color: rgb(33, 11, 73);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -74,6 +96,7 @@
       }
 
       .form {
+        color: rgb(33, 11, 73);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -85,15 +108,16 @@
       }
 
       .form input {
-        text-align: center;
         border-top: 0px;
         border-left: 0px;
         border-right: 0px;
         border-style: solid;
         border-bottom-width: 3px;
-        border-bottom-color: chartreuse;
-        background-color: cadetblue;
-        color: white;
+        border-bottom-color: rgb(33, 11, 73);
+        background-color: white;
+        color: rgb(33, 11, 73);
+        font-family: "Bungee Hairline", cursive;
+        font-size: 22px;
       }
 
       .update-form h1 {
@@ -101,7 +125,7 @@
       }
 
       ::placeholder {
-        color: white;
+        color: rgb(33, 11, 73);
       }
 
       #btn {
@@ -113,9 +137,18 @@
       }
 
       #footer {
-        background-color: cadetblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(33, 11, 73);
         height: 4rem;
-        margin-top: auto;
+        margin-top: 1rem;
+      }
+
+      #logo {
+        width: 200px;
+        height: auto;
       }
     </style>
   </head>

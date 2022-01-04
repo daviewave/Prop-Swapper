@@ -9,6 +9,7 @@ import Navbar from "./components/navbar";
 import CssBaseline from "@mui/material/CssBaseline";
 import Signup from "./pages/Signup";
 import Info from "./pages/Info";
+import About from "./pages/About";
 
 const client = new ApolloClient({
   uri: "/graphql",
@@ -28,6 +29,7 @@ const App = () => {
             <Route exact path="/search" element={<Search />} />
             <Route exact path="/signup" element={<Signup />} />
             <Route exact path="/updateinfo" element={<Info />} />
+            <Route exact path="/" element={<About />} />
           </Routes>
         </div>
         <Footer />
