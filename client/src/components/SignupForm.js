@@ -6,7 +6,11 @@ import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
 
+import { useUserContext } from "../utils/GlobalState";
+import { UPDATE_CURRENTUSER } from "../utils/actions";
+
 const SignupForm = () => {
+  const [, dispatch] = useUserContext();
   const [formState, setFormState] = useState({
     username: "",
     email: "",
@@ -25,16 +29,20 @@ const SignupForm = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
 
     try {
-      const { data } = await addUser({
+      const { user } = await addUser({
         variables: { ...formState },
       });
 
-      Auth.login(data.addUser.token);
+      Auth.login(user.addUser.token);
 
-      console.log(data);
+      if (user) {
+        dispatch({
+          type: UPDATE_CURRENTUSER,
+          currentUser: user,
+        });
+      }
     } catch (e) {
       console.error(e);
     }
