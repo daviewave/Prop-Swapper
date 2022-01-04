@@ -3,15 +3,19 @@ import { Container } from "@mui/material";
 
 const Search = () => {
   return (
-    <Container>
+    <Container id="about-container">
       <div>
-        <h1>Start searching for your next swap!</h1>
+        <h1>Search for potential swaps</h1>
+        <h2>Select a state:</h2>
         <form className="form">
-          <select name="states">
+          <select id="states" name="states">
             <option value="NY">NY</option>
             <option value="FL">FL</option>
             <option value="IL">IL</option>
             <option value="TN">TN</option>
+            <button id="btn" type="button">
+              Submit
+            </button>
           </select>
         </form>
       </div>

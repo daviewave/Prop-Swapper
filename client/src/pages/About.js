@@ -3,10 +3,10 @@ import Container from "@mui/material/Container";
 
 const About = () => {
   return (
-    <Container>
+    <Container id="about-container">
       <div>
         <h1>About Prop Swap</h1>
-        <p>
+        <p id="about">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
           excepturi aperiam ad deserunt maxime, sunt at dicta neque dolorum sed
           adipisci, quaerat delectus porro quidem rerum animi dolore. Ullam,
