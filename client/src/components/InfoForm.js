@@ -102,7 +102,9 @@ const InfoForm = () => {
           </div>
         )}
       </div>
-      <Link to="/profile">Back To Profile</Link>
+      <Link style={{ textDecoration: "none" }} to="/profile">
+        Back To Profile
+      </Link>
     </Container>
   );
 };
