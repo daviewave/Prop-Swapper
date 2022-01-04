@@ -63,10 +63,13 @@ const LoginForm = () => {
   return (
     <Container id="form-container" maxWidth="xs">
       <div>
-        <p>Login!</p>
+        <p>Login to prop swap</p>
         {data ? (
           <p>
-            Success! You may now head <Link to="/">back to the homepage.</Link>
+            Success! You may now head{" "}
+            <Link id="body-link" to="/">
+              back to the homepage.
+            </Link>
           </p>
         ) : (
           <form className="form">
@@ -101,7 +104,7 @@ const LoginForm = () => {
         Don't have an account with us?{" "}
         <span>
           {" "}
-          <Link id="link" style={{ textDecoration: "none" }} to="/signup">
+          <Link id="body-link" style={{ textDecoration: "none" }} to="/signup">
             Sign Up!
           </Link>
         </span>{" "}

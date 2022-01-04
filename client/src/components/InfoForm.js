@@ -48,17 +48,17 @@ const InfoForm = () => {
     setDescription("");
   };
   return (
-    <Container id="form-container" maxWidth="xs">
+    <Container id="info-container" maxWidth="xs">
       <div>
         <p>UPDATE YOUR INFO TO START SWAPPING</p>
-        <form className="form">
+        <form id="info-form">
           <h1>Address:</h1>
           <input
             value={address}
             name="address"
             onChange={handleInputChange}
             type="email"
-            placeholder="email"
+            placeholder="Address"
           />
           <h1>City:</h1>
           <input
@@ -68,29 +68,29 @@ const InfoForm = () => {
             type="text"
             placeholder="username"
           />
-          <h1>State</h1>
+          <h1>State:</h1>
           <input
             value={state}
             name="state"
             onChange={handleInputChange}
             type="text"
-            placeholder="Password"
+            placeholder="State"
           />
-          <h1>Bedrooms</h1>
+          <h1>Bedrooms:</h1>
           <input
             value={bedrooms}
             name="bedrooms"
             onChange={handleInputChange}
             type="text"
-            placeholder="Password"
+            placeholder="# of Bedrooms"
           />
-          <h1>Description</h1>
+          <h1>Description:</h1>
           <input
             value={description}
             name="description"
             onChange={handleInputChange}
             type="text"
-            placeholder="Password"
+            placeholder="Description"
           />
           <button id="btn" type="button" onClick={handleFormSubmit}>
             Update!
@@ -102,7 +102,7 @@ const InfoForm = () => {
           </div>
         )}
       </div>
-      <Link style={{ textDecoration: "none" }} to="/profile">
+      <Link id="body-link" style={{ textDecoration: "none" }} to="/profile">
         Back To Profile
       </Link>
     </Container>
