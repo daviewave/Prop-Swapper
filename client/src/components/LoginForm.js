@@ -101,7 +101,7 @@ const LoginForm = () => {
         Don't have an account with us?{" "}
         <span>
           {" "}
-          <Link id="link" style={{ textDecoration: "none" }} to="/signup">
+          <Link id="body-link" style={{ textDecoration: "none" }} to="/signup">
             Sign Up!
           </Link>
         </span>{" "}

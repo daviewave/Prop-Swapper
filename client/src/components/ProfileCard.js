@@ -14,7 +14,11 @@ const ProfileCard = () => {
         <h2># of Bedrooms: </h2>
         <h2>email: </h2>
 
-        <Link style={{ textDecoration: "none" }} to="/updateinfo">
+        <Link
+          id="body-link"
+          style={{ textDecoration: "none" }}
+          to="/updateinfo"
+        >
           Update Info
         </Link>
       </Container>
