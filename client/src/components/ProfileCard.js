@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useUserContext } from "../utils/GlobalState";
 
 const ProfileCard = () => {
   return (
