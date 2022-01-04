@@ -26,5 +26,26 @@
     "state": "TN",
     "zip": 37203,
     "bedrooms": 8
+  },
+  {
+    "address": "1600 Clairmont Avenue NW",
+    "city": "Tuscan",
+    "state": "AZ",
+    "zip": 85641,
+    "bedrooms": 2
+  },
+  {
+    "address": "1 Bison Drive",
+    "city": "Cheyenne",
+    "state": "WY",
+    "zip": 82001,
+    "bedrooms": 4
+  },
+  {
+    "address": "420 Pan Ave",
+    "city": "San Franciso",
+    "state": "CA",
+    "zip": 94016,
+    "bedrooms": 1
   }
 ]

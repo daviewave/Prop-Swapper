@@ -18,5 +18,20 @@
     "username": "Alan Kay",
     "email": "akay@techfriends.dev",
     "password": "password06"
+  },
+  {
+    "username": "Bob Vance",
+    "email": "bobvance@vancerefridgeration.com",
+    "password": "password07"
+  },
+  {
+    "username": "Sam Jackson",
+    "email": "notthatSamJackson@acting.gov",
+    "password": "password08"
+  },
+  {
+    "username": "Joe Biden",
+    "email": "potus@us.gov",
+    "password": "password"
   }
 ]
