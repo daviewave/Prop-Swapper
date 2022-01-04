@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/prop-swap", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/prop-swap", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
