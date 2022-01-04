@@ -1,23 +1,20 @@
 import React from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
     <nav id="navbar">
-      <img
-        className="image"
-        src="client/public/Screen_Shot_2022-01-03_at_1.25.26_PM-removebg-preview.png"
-        alt="logo"
-      />
+      <img id="logo" className="image" src={logo} alt="logo" />
       <ul id="navtabs">
-        <Link style={{ textDecoration: "none" }} to="/profile">
+        <Link id="link" style={{ textDecoration: "none" }} to="/profile">
           <li>My Prop</li>
         </Link>
-        <Link style={{ textDecoration: "none" }} to="/search">
+        <Link id="link" style={{ textDecoration: "none" }} to="/search">
           <li>Swap!</li>
         </Link>
-        <Link style={{ textDecoration: "none" }} to="/login">
+        <Link id="link" style={{ textDecoration: "none" }} to="/login">
           <li>Login</li>
         </Link>
       </ul>
