@@ -7,13 +7,11 @@ const About = () => {
       <div>
         <h1>About Prop Swap</h1>
         <p id="about">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
-          excepturi aperiam ad deserunt maxime, sunt at dicta neque dolorum sed
-          adipisci, quaerat delectus porro quidem rerum animi dolore. Ullam,
-          consequatur. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Ipsa, iste libero consequuntur minima aspernatur corrupti nulla qui
-          minus assumenda? Obcaecati excepturi aut dicta placeat ad ab quas quia
-          dolorum iste!
+          Cash is so last year! Why let money change hands when you can join the
+          exciting life of Prop Swapping! Welcome to Prop Swap, where you can
+          find vacation homes for the low low price of your own home. Sign up
+          and add your property to get started, and remember: Prop Swapping
+          isn't a phase, it's a lifestyle!
         </p>
       </div>
     </Container>
