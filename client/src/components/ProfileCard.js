@@ -7,12 +7,12 @@ const ProfileCard = () => {
     <div>
       <Container id="profile-container">
         <h1>profile</h1>
-        <h2>Address: </h2>
-        <h2>City: </h2>
-        <h2>State: </h2>
-        <h2>Zip: </h2>
-        <h2># of Bedrooms: </h2>
-        <h2>email: </h2>
+        <h2>Address: 44 Penny Lane</h2>
+        <h2>City: New York City</h2>
+        <h2>State: NY</h2>
+        <h2>Zip: 10013</h2>
+        <h2># of Bedrooms: 2</h2>
+        <h2>email: propswap@propswap.com</h2>
 
         <Link
           id="body-link"
