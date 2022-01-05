@@ -1,15 +1,19 @@
 import React from "react";
-import { Container } from "@mui/material";
-import { Box } from "@mui/system";
+import Auth from "../utils/auth";
+
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
   return (
     <footer id="footer">
-      <Container maxWidth="lg">
-        <Box>
-          <h1>Footer</h1>
-        </Box>
-      </Container>
+      <Link id="link" style={{ textDecoration: "none" }} to="/">
+        About
+      </Link>
+      {Auth.loggedIn ? <button onClick={logout}>logout</button> : <></>}
     </footer>
   );
 };

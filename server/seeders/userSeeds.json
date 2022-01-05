@@ -1,6 +1,6 @@
 [
   {
-    "username": "Brian Kernighan",
+    "username": "Brian Hernighan",
     "email": "bkernighan@techfriends.dev",
     "password": "password01"
   },
@@ -18,5 +18,20 @@
     "username": "Alan Kay",
     "email": "akay@techfriends.dev",
     "password": "password06"
+  },
+  {
+    "username": "Bob Vance",
+    "email": "bobvance@vancerefridgeration.com",
+    "password": "password07"
+  },
+  {
+    "username": "Sam Jackson",
+    "email": "notthatSamJackson@acting.gov",
+    "password": "password08"
+  },
+  {
+    "username": "Joe Biden",
+    "email": "potus@us.gov",
+    "password": "password"
   }
 ]

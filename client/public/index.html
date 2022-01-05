@@ -24,21 +24,37 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Hairline&display=swap"
+      rel="stylesheet"
+    />
     <title>Prop Swap</title>
     <style>
       * {
-        font-family: "Courier New", Courier, monospace;
+        font-family: "Bungee", cursive;
+        font-size: 20px;
       }
 
       #body {
         min-height: 100vh;
+        background: url(https://upload.wikimedia.org/wikipedia/commons/c/c2/Sphere_rotating_transparency.gif)
+          fixed center;
+        /* backdrop-filter: blur(7px); */
+        background-repeat: no-repeat;
+        background-size: 900px;
       }
 
       #navbar {
         color: white;
         display: flex;
         flex-direction: column;
+<<<<<<< HEAD
         background-color: rgb(209, 51, 209);
+=======
+        background-color: rgb(33, 11, 73);
+>>>>>>> 1898df87c567eb6313f09cebf06669efd7e71ed1
         margin-bottom: 2rem;
         align-items: center;
         flex-wrap: wrap;
@@ -59,14 +75,39 @@
         padding: 0px;
       }
 
+      #link {
+        color: rgb(66, 137, 219);
+      }
+
       #link:hover {
         color: white;
       }
 
+      #link:active {
+        transition-timing-function: ease-in-out;
+        transition: 0.5s;
+        transform: translateY(4px);
+      }
+
+      #body-link {
+        color: rgb(66, 137, 219);
+      }
+
+      #body-link:hover {
+        color: rgb(33, 11, 73);
+      }
+
       #form-container {
+<<<<<<< HEAD
         color: white;
         background-color: rgb(209, 51, 209);
         border-radius: 20px;
+=======
+        background-color: white;
+        border-style: solid;
+        border-width: 10px;
+        border-color: rgb(33, 11, 73);
+>>>>>>> 1898df87c567eb6313f09cebf06669efd7e71ed1
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -75,6 +116,7 @@
       }
 
       .form {
+        color: rgb(33, 11, 73);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -86,15 +128,27 @@
       }
 
       .form input {
+<<<<<<< HEAD
         color: white;
         text-align: center;
+=======
+>>>>>>> 1898df87c567eb6313f09cebf06669efd7e71ed1
         border-top: 0px;
         border-left: 0px;
         border-right: 0px;
         border-style: solid;
+<<<<<<< HEAD
         border-bottom-width: 3px;
         background-color: rgb(209, 51, 209);
         color: white;
+=======
+        border-bottom-width: 1px;
+        border-bottom-color: rgb(33, 11, 73);
+        background-color: white;
+        color: rgb(33, 11, 73);
+        font-family: "Bungee Hairline", cursive;
+        font-size: 22px;
+>>>>>>> 1898df87c567eb6313f09cebf06669efd7e71ed1
       }
 
       .update-form h1 {
@@ -102,7 +156,66 @@
       }
 
       ::placeholder {
-        color: white;
+        color: rgb(33, 11, 73);
+      }
+
+      #profile-container {
+        background-color: white;
+        border-style: solid;
+        border-width: 10px;
+        border-color: rgb(33, 11, 73);
+      }
+
+      #profile-container h1 {
+        font-size: 200%;
+        color: rgb(66, 137, 219);
+      }
+
+      #about-container {
+        background-color: white;
+        border-style: solid;
+        border-width: 10px;
+        border-color: rgb(33, 11, 73);
+        max-width: 80%;
+      }
+
+      #about {
+        font-family: "Bungee Hairline", cursive;
+        font-weight: 600;
+      }
+
+      #info-container {
+        background-color: white;
+        border-style: solid;
+        border-width: 10px;
+        border-color: rgb(33, 11, 73);
+      }
+
+      #info-container h4 {
+        font-family: "Bungee Hairline", cursive;
+      }
+
+      #info-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      #info-form :focus {
+        outline: none;
+      }
+
+      #info-form input {
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: rgb(33, 11, 73);
+        background-color: white;
+        color: rgb(33, 11, 73);
+        font-family: "Bungee Hairline", cursive;
+        font-size: 22px;
       }
 
       .btn {
@@ -126,6 +239,7 @@
         transition: 1s ease-in-out;
       }
 
+<<<<<<< HEAD
       .btn:hover {
         transition: 1s ease-in-out;
         background: #4f95da;
@@ -140,15 +254,34 @@
         font-size: 18px;
         font-weight: 100;
       }
+=======
+      #states {
+        margin-bottom: 1rem;
+      }
+
+>>>>>>> 1898df87c567eb6313f09cebf06669efd7e71ed1
       #login-form-bottom {
         text-align: center;
       }
 
       #footer {
+<<<<<<< HEAD
         background-color: rgb(209, 51, 209);
         color: white;
+=======
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(33, 11, 73);
+>>>>>>> 1898df87c567eb6313f09cebf06669efd7e71ed1
         height: 4rem;
-        margin-top: auto;
+        margin-top: 1rem;
+      }
+
+      #logo {
+        width: 200px;
+        height: auto;
       }
     </style>
   </head>
