@@ -73,15 +73,28 @@ const resolvers = {
     //TODO: right now, this mutation works by passing in the current user as a parameter, this is unnecassary bc the user has to be logged on to  add their property ... basically if the user does not have a property associated with account, we will need to save the username and pass that in as a parameter
 
     //NOTE: SHOULD WE TAKE OUT CITY FOR THE MVP?
-    addProperty: async ({ address, city, state, zip, bedrooms, user }) => {
+    addProperty: async (
+      parent,
+      { address, city, state, zip, bedrooms, user },
+      context
+    ) => {
       const property = await Property.create({
         address,
         city,
         state,
         zip,
         bedrooms,
-        user,
+        user: context.user._id,
       });
+
+      await User.findOneAndUpdate(
+        {
+          _id: context.user._id,
+        },
+        {
+          property: property._id,
+        }
+      );
       return { property };
     },
   },
